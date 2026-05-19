@@ -110,5 +110,3 @@ function FilterChip({
   );
 }
 
-// also needed exports for product detail page below
-export { whatsappLink };
