@@ -12,7 +12,7 @@ export const Route = createFileRoute("/sitemap.xml")({
     handlers: {
       GET: async () => {
         const { PRODUCTS, BLOG_POSTS } = await import("@/lib/content");
-        const urls = [
+        const urls: { loc: string; priority: string; lastmod?: string }[] = [
           ...STATIC_PATHS.map((p) => ({ loc: p, priority: p === "/" ? "1.0" : "0.8" })),
           ...PRODUCTS.map((p) => ({ loc: `/products/${p.slug}`, priority: "0.7" })),
           ...BLOG_POSTS.map((p) => ({ loc: `/blog/${p.slug}`, priority: "0.6", lastmod: p.date })),

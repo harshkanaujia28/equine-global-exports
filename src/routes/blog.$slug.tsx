@@ -78,7 +78,7 @@ function PostPage() {
           <p className="mt-5 text-xl text-muted-foreground text-pretty">{post.excerpt}</p>
 
           <div className="prose-content mt-12 space-y-6 text-base leading-relaxed text-foreground/90">
-            {post.body.split("\n\n").map((block, i) => {
+            {post.body.split("\n\n").map((block: string, i: number) => {
               if (block.startsWith("## ")) {
                 return (
                   <h2 key={i} className="mt-12 font-display text-2xl font-bold md:text-3xl">

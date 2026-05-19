@@ -90,7 +90,7 @@ function ProductPage() {
                 Technical specifications
               </h3>
               <dl className="divide-y divide-border">
-                {p.specs.map((s) => (
+                {p.specs.map((s: { label: string; value: string }) => (
                   <div key={s.label} className="grid grid-cols-2 gap-4 px-6 py-3.5 text-sm">
                     <dt className="text-muted-foreground">{s.label}</dt>
                     <dd className="font-medium">{s.value}</dd>
