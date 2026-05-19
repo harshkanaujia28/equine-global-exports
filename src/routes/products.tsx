@@ -4,8 +4,8 @@ import { Section, Container } from "@/components/site/Section";
 import { CTASection } from "@/components/site/CTASection";
 import { Reveal } from "@/components/site/Reveal";
 import { CATEGORIES, PRODUCTS, type ProductCategory } from "@/lib/content";
-import { BRAND, whatsappLink } from "@/lib/brand";
-import { ArrowRight, MessageCircle, Package } from "lucide-react";
+import { BRAND } from "@/lib/brand";
+import { ArrowRight, Package } from "lucide-react";
 
 const SearchSchema = z.object({
   cat: z
