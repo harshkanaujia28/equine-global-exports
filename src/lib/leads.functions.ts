@@ -26,7 +26,7 @@ export const submitLead = createServerFn({ method: "POST" })
       company: data.company || null,
       product_interest: data.product_interest || null,
       message: data.message || null,
-      payload: data.payload ?? null,
+      payload: (data.payload ?? null) as never,
     });
 
     if (error) {
